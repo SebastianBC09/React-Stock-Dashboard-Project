@@ -38,13 +38,13 @@ function App() {
                     <section className="ctn-others-charts">
                       <div className="row">
                         <div className="col-md-4">
-                          <section className="ctn-chartA"></section>
+                          <section className="ctn-chartA glassmorphism-effect"></section>
                         </div>
                         <div className="col-md-4">
-                          <section className="ctn-chartB"></section>
+                          <section className="ctn-chartB glassmorphism-effect"></section>
                         </div>
                         <div className="col-md-4">
-                          <section className="ctn-chartC"></section>
+                          <section className="ctn-chartC glassmorphism-effect"></section>
                         </div>
                       </div>
                     </section>

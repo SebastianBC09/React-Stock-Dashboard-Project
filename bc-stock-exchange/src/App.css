@@ -61,7 +61,7 @@
 }
 
 .ctn-sidebar {
-  height: 900px;
+  height: 1000px;
   width: 106px;
 }
 
@@ -100,9 +100,6 @@
 }
 
 .ctn-others-charts {
-  background-image: linear-gradient(to right bottom, #204b57, #145064, #055573, #005981, #0f5c8f);
-  border: 0px solid #FFFFFF;
-  border-radius: 40px;
   margin-top: 50px;
   margin-right: 100px;
   margin-left: 100px;
@@ -114,6 +111,7 @@
   background-image: linear-gradient(to right bottom, #197bbd, #1574b0, #136ca3, #126596, #125e8a);
   border: 0px solid #FFFFFF;
   border-radius: 40px;
+  margin: auto;
   height: 220px;
   width: 260px;
 }
@@ -121,6 +119,15 @@
 .ctn-chartB{
   background-image: linear-gradient(to right bottom, #197bbd, #1574b0, #136ca3, #126596, #125e8a);
   border-radius: 40px;
-  height: 150px;
-  width: 230px;
+  margin: auto;
+  height: 180px;
+  width: 260px;
+}
+
+.ctn-chartC {
+  background-image: linear-gradient(to right bottom, #197bbd, #1574b0, #136ca3, #126596, #125e8a);
+  border-radius: 40px;
+  margin: auto;
+  height: 190px;
+  width: 260px;
 }
