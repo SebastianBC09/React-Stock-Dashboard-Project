@@ -36,9 +36,17 @@ function App() {
                 <div className="row">
                   <div className="col-md-11">
                     <section className="ctn-others-charts">
-                      <section className="ctn-chartA"></section>
-                      <section className="ctn-chartB"></section>
-                      <section className="ctn-chartC"></section>
+                      <div className="row">
+                        <div className="col-md-4">
+                          <section className="ctn-chartA"></section>
+                        </div>
+                        <div className="col-md-4">
+                          <section className="ctn-chartB"></section>
+                        </div>
+                        <div className="col-md-4">
+                          <section className="ctn-chartC"></section>
+                        </div>
+                      </div>
                     </section>
                   </div>
                 </div>
