@@ -8,42 +8,61 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-   /*<div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>,*/
+    /*<div className="App">
+       <header className="App-header">
+         <img src={logo} className="App-logo" alt="logo" />
+         <p>
+           Edit <code>src/App.js</code> and save to reload.
+         </p>
+         <a
+           className="App-link"
+           href="https://reactjs.org"
+           target="_blank"
+           rel="noopener noreferrer"
+         >
+           Learn React
+         </a>
+       </header>
+     </div>,*/
     <section className="container-fluid">
-      <aside className="ctn-sidebar">
-        <ul className="sidebar-links">
-          <li className="sd-logo">
-          <FontAwesomeIcon icon={faApple} size="3x"/>
-          </li>
-          <li className="sd-logo">
-          <FontAwesomeIcon icon={faAmazon} size="3x"/>
-          </li>
-          <li className="sd-logo">
-          <FontAwesomeIcon icon={faTwitter} size="3x"/>
-          </li>
-        </ul>
-      </aside>
-      <section className="ctn-main-chart">
-      </section>
-      <section className="ctn-charts">
-      </section>
-      <section className="ctn-others-charts">
-      </section>
+      <div className="row">
+        <div className="row">
+          <div className="col-md-1">
+            <aside className="ctn-sidebar">
+              <ul className="sidebar-links">
+                <li className="sd-logo">
+                  <FontAwesomeIcon icon={faApple} size="3x" />
+                </li>
+                <li className="sd-logo">
+                  <FontAwesomeIcon icon={faAmazon} size="3x" />
+                </li>
+                <li className="sd-logo">
+                  <FontAwesomeIcon icon={faTwitter} size="3x" />
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <div className="col-md-11">
+            <section className="ctn-main-chart glassmorphism-effect">
+            </section>
+            <div className="row">
+              <div className="col-md-11">
+                <section className="ctn-charts glassmorphism-effect">
+                </section>
+                <div className="row">
+                  <div className="col-md-12">
+                    <section className="ctn-others-charts">
+                      <section className="ctn-chartA"></section>
+                      <section className="ctn-chartB"></section>
+                      <section className="ctn-chartC"></section>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
