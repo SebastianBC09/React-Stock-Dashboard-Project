@@ -38,6 +38,12 @@ function App() {
           </li>
         </ul>
       </aside>
+      <section className="ctn-main-chart">
+      </section>
+      <section className="ctn-charts">
+      </section>
+      <section className="ctn-others-charts">
+      </section>
     </section>
   );
 }
