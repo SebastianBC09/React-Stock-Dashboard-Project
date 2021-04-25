@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faApple } from '@fortawesome/free-brands-svg-icons'
+import { faAmazon } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -20,10 +24,21 @@ function App() {
         </a>
       </header>
     </div>,*/
-    <main>
-      <section className="container-fluid">
-      </section>
-    </main>
+    <section className="container-fluid">
+      <aside className="ctn-sidebar">
+        <ul className="sidebar-links">
+          <li className="sd-logo">
+          <FontAwesomeIcon icon={faApple} size="3x"/>
+          </li>
+          <li className="sd-logo">
+          <FontAwesomeIcon icon={faAmazon} size="3x"/>
+          </li>
+          <li className="sd-logo">
+          <FontAwesomeIcon icon={faTwitter} size="3x"/>
+          </li>
+        </ul>
+      </aside>
+    </section>
   );
 }
 

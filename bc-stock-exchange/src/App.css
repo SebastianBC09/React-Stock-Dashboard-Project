@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+/* Glass efect */
+
+.glassmorphism-effect {
+  background: rgba( 18, 94, 138, 0.20 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 2.0px );
+  -webkit-backdrop-filter: blur( 2.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+/* Main Section */
+.container-fluid {
+  background: radial-gradient(circle, rgba(18,94,138,1) 35%, rgba(32,75,87,1) 100%);
+  border: 0px solid #FFFFFF;
+  border-radius: 40px;
+  box-shadow: 10px 10px 30px 5px rgba(32,75,87,1);
+  height: 1000px;
+  margin: 50px;
+  width: 1249px!important;
+}
+
+.ctn-sidebar {
+  height: 900px;
+  width: 106px;
+}
+
+.sidebar-links{
+  list-style: none;
+  padding-top:400px ;
+}
+
+.sd-logo {
+  height: 100px;
+  width: 100px;
+  padding: 25px;
+}
