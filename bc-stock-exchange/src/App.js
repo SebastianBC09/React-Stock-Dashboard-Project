@@ -7,10 +7,15 @@ import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 =======
 import Axios from 'axios'
 >>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
+=======
+import axios from 'axios';
+import { useState } from 'react';
+>>>>>>> 32aed48 (Trying to use axios to make the request to the API but theres's an issue saying that cant resolve axios. Trying to use fetch instead.)
 require('dotenv').config()
 
 /* import Main from './Components/LineChart'
@@ -40,12 +45,13 @@ function App() {
     acccess_key: api_key,
   }
 
-  
+  const [stock, setStock] = useState("")
   
   const getStock = () => {
-    Axios.get('https://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
+    axios.get('http://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
       (response) =>{
         console.log(response)
+        setStock(response.data.name + " " + response.data.symbol)
       })
 >>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
   }
@@ -74,7 +80,11 @@ function App() {
             {stock}
 =======
             {/* <Main /> */}
+<<<<<<< HEAD
 >>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
+=======
+            {stock}
+>>>>>>> 32aed48 (Trying to use axios to make the request to the API but theres's an issue saying that cant resolve axios. Trying to use fetch instead.)
             </section>
             <div className="row">
               <div className="col-md-11">
