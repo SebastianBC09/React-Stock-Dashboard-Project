@@ -8,6 +8,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 =======
 import Axios from 'axios'
@@ -32,6 +33,18 @@ function App() {
 
   const [stock, setStock] = useState("")
   
+=======
+import API from './Components/API'
+/* import { useState } from 'react'; */
+require('dotenv').config()
+
+function App() {
+  
+/*   const apiKey = process.env.API_KEY;
+  const params = {acccess_key: apiKey} */
+
+/*   const [stock, setStock] = useState("") */
+>>>>>>> 04dfe0f54db1cde88ed2225b560832a4d5a0dd69
   const getStock = () => {
     fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
     .then((response) => response.json())
@@ -39,6 +52,7 @@ function App() {
     .then((data) => {
       setStock(data.name + " " + data.symbol)
     })
+<<<<<<< HEAD
 =======
   const api_key = process.env.API_KEY;
   const params = {
@@ -54,6 +68,8 @@ function App() {
         setStock(response.data.name + " " + response.data.symbol)
       })
 >>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
+=======
+>>>>>>> 04dfe0f54db1cde88ed2225b560832a4d5a0dd69
   }
   return (
     <section className="container-fluid">
@@ -77,6 +93,7 @@ function App() {
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
 <<<<<<< HEAD
+<<<<<<< HEAD
             {stock}
 =======
             {/* <Main /> */}
@@ -85,6 +102,9 @@ function App() {
 =======
             {stock}
 >>>>>>> 32aed48 (Trying to use axios to make the request to the API but theres's an issue saying that cant resolve axios. Trying to use fetch instead.)
+=======
+            <API />
+>>>>>>> 04dfe0f54db1cde88ed2225b560832a4d5a0dd69
             </section>
             <div className="row">
               <div className="col-md-11">
