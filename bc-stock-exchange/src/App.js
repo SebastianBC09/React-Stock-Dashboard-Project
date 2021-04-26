@@ -23,7 +23,7 @@ function App() {
     .then((data) => {
       setStock(data.name + " " + data.symbol)
     })
-  } */
+  }
   return (
     <section className="container-fluid">
       <div className="row">
