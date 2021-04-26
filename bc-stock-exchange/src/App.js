@@ -32,7 +32,7 @@ function App() {
           <div className="col-md-1 ">
             <aside className="ctn-sidebar">
               <ul className="sidebar-links">
-                <li className="sd-logo">
+                <li className="sd-logo" onClick={getStock}>
                   <FontAwesomeIcon icon={faApple} size="3x" />
                 </li>
                 <li className="sd-logo">
@@ -50,6 +50,7 @@ function App() {
             <div className="row">
               <div className="col-md-11">
                 <section className="ctn-charts glassmorphism-effect">
+                {/* <Daily /> */}
                 </section>
                 <div className="row">
                   <div className="col-md-11">
