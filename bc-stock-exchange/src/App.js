@@ -6,7 +6,6 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import axios from 'axios';
 import { useState } from 'react';
 require('dotenv').config()
 
@@ -16,19 +15,20 @@ import Daily from './Components/DayChart' */
 
 function App() {
   
-  const api_key = process.env.API_KEY;
-  const params = {
+  const apiKey = process.env.API_KEY;
+  /* const params = {
     acccess_key: api_key,
-  }
+  } */
 
   const [stock, setStock] = useState("")
   
   const getStock = () => {
-    axios.get('http://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
-      (response) =>{
-        console.log(response)
-        setStock(response.data.name + " " + response.data.symbol)
-      })
+    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=1b6bd2c61164ca620bf83bae4a10194b`)
+    .then((response) => response.json())
+    .then((json) => console.log(json))
+    .then((data) => {
+      setStock(data.name + " " + data.symbol)
+    })
   }
   return (
     <section className="container-fluid">
@@ -51,13 +51,11 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
-            {/* <Main /> */}
             {stock}
             </section>
             <div className="row">
               <div className="col-md-11">
                 <section className="ctn-charts glassmorphism-effect">
-                {/* <Daily /> */}
                 </section>
                 <div className="row">
                   <div className="col-md-11">
