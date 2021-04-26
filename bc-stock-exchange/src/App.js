@@ -6,30 +6,25 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import { useState } from 'react';
+import API from './Components/API'
+/* import { useState } from 'react'; */
 require('dotenv').config()
-
-/* import Main from './Components/LineChart'
-import Daily from './Components/DayChart' */
-
 
 function App() {
   
-  const apiKey = process.env.API_KEY;
-  /* const params = {
-    acccess_key: api_key,
-  } */
+/*   const apiKey = process.env.API_KEY;
+  const params = {acccess_key: apiKey} */
 
-  const [stock, setStock] = useState("")
+/*   const [stock, setStock] = useState("") */
   
-  const getStock = () => {
+/*   const getStock = () => {
     fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=1b6bd2c61164ca620bf83bae4a10194b`)
     .then((response) => response.json())
     .then((json) => console.log(json))
     .then((data) => {
       setStock(data.name + " " + data.symbol)
     })
-  }
+  } */
   return (
     <section className="container-fluid">
       <div className="row">
@@ -37,7 +32,7 @@ function App() {
           <div className="col-md-1 ">
             <aside className="ctn-sidebar">
               <ul className="sidebar-links">
-                <li className="sd-logo" onClick={getStock}>
+                <li className="sd-logo">
                   <FontAwesomeIcon icon={faApple} size="3x" />
                 </li>
                 <li className="sd-logo">
@@ -51,7 +46,7 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
-            {stock}
+            <API />
             </section>
             <div className="row">
               <div className="col-md-11">
