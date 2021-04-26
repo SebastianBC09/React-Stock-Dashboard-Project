@@ -7,7 +7,6 @@ import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import API from './Components/API'
-
 require('dotenv').config()
 
 function App() {
@@ -19,6 +18,17 @@ function App() {
 
   /* const [stock, setStock] = useState("")
   
+=======
+import API from './Components/API'
+/* import { useState } from 'react'; */
+require('dotenv').config()
+
+function App() {
+  
+/*   const apiKey = process.env.API_KEY;
+  const params = {acccess_key: apiKey} */
+
+/*   const [stock, setStock] = useState("") */
   const getStock = () => {
     fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
     .then((response) => response.json())
@@ -26,7 +36,9 @@ function App() {
     .then((data) => {
       setStock(data.name + " " + data.symbol)
     })
-  } */
+
+  }
+  }
 
   return (
     <section className="container-fluid">
@@ -54,7 +66,6 @@ function App() {
             <div className="row">
               <div className="col-md-11">
                 <section className="ctn-charts glassmorphism-effect">
-                {/* <Daily /> */}
                 </section>
                 <div className="row">
                   <div className="col-md-11">
