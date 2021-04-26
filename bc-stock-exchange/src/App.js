@@ -6,7 +6,8 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import Axios from 'axios'
+import axios from 'axios';
+import { useState } from 'react';
 require('dotenv').config()
 
 /* import Main from './Components/LineChart'
@@ -20,12 +21,13 @@ function App() {
     acccess_key: api_key,
   }
 
-  
+  const [stock, setStock] = useState("")
   
   const getStock = () => {
-    Axios.get('https://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
+    axios.get('http://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
       (response) =>{
         console.log(response)
+        setStock(response.data.name + " " + response.data.symbol)
       })
   }
   return (
@@ -50,6 +52,7 @@ function App() {
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
             {/* <Main /> */}
+            {stock}
             </section>
             <div className="row">
               <div className="col-md-11">
