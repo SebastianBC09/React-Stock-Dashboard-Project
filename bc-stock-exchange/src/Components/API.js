@@ -1,39 +1,27 @@
-import React from 'react';
+import React from 'react';  
+import {useState} from 'react'
 
-class API extends React.Component {
-  state = {
-    loading: true,
-    error: null,
-    data: {}
+function API () {
+
+  const [data, setData] = useState([])
+
+  const getAPI = () => {
+    fetch('http://api.marketstack.com/v1/tickers/aapl/eod?access_key=1b6bd2c61164ca620bf83bae4a10194bg')
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json)
+      setData(json)
+    })
   }
 
-  componentDidMount() {
-    this.fetchData()
-  }
-
-  fetchData = async () => {
-    this.setState ({ loading: true, error: null })
-
-    try {
-      const data = await fetch('api.marketstack.com/v1/tickers/aapl/eod?access_key=1b6bd2c61164ca620bf83bae4a10194b')
-      .then (response => response.json())
-      .then (data => console.log(data))
-
-      this.setState({ loading: false, data: data }
-        )
-    } catch (error) {
-      this.setState({ loading: false, error: error })
-    }
-  }
-
-  render() {
-    if(this.state.loading === true) {
-      return 'Loading...'
-    }
-    return (
-      <h1>Should display Apple Stock info</h1>
-    )
-  }
+  return (
+    <div>
+      <p>My API</p>
+      <button onClick={getAPI}>Fetch API</button>
+      <br/>
+      {JSON.stringify(data, null, 2)}
+    </div>
+  )
 }
 
 export default API
