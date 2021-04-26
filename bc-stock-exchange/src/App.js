@@ -23,7 +23,7 @@ function App() {
   const [stock, setStock] = useState("")
   
   const getStock = () => {
-    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=1b6bd2c61164ca620bf83bae4a10194b`)
+    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
     .then((response) => response.json())
     .then((json) => console.log(json))
     .then((data) => {
