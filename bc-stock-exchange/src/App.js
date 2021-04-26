@@ -11,25 +11,11 @@ require('dotenv').config()
 
 function App() {
   
-  /* const apiKey = process.env.API_KEY;
-  const params = {
-    acccess_key: api_key,
-  } */
-
-  /* const [stock, setStock] = useState("")
-  
-=======
-import API from './Components/API'
-/* import { useState } from 'react'; */
-require('dotenv').config()
-
-function App() {
-  
 /*   const apiKey = process.env.API_KEY;
   const params = {acccess_key: apiKey} */
 
 /*   const [stock, setStock] = useState("") */
-  const getStock = () => {
+  /* const getStock = () => {
     fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
     .then((response) => response.json())
     .then((json) => console.log(json))
@@ -38,7 +24,7 @@ function App() {
     })
 
   }
-  }
+  } */
 
   return (
     <section className="container-fluid">
