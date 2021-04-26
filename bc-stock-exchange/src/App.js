@@ -6,7 +6,11 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+<<<<<<< HEAD
 import { useState } from 'react';
+=======
+import Axios from 'axios'
+>>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
 require('dotenv').config()
 
 /* import Main from './Components/LineChart'
@@ -15,6 +19,7 @@ import Daily from './Components/DayChart' */
 
 function App() {
   
+<<<<<<< HEAD
   const apiKey = process.env.API_KEY;
   /* const params = {
     acccess_key: api_key,
@@ -29,6 +34,20 @@ function App() {
     .then((data) => {
       setStock(data.name + " " + data.symbol)
     })
+=======
+  const api_key = process.env.API_KEY;
+  const params = {
+    acccess_key: api_key,
+  }
+
+  
+  
+  const getStock = () => {
+    Axios.get('https://api.marketstack.com/v1/tickers/aapl/eod', {params}).then(
+      (response) =>{
+        console.log(response)
+      })
+>>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
   }
   return (
     <section className="container-fluid">
@@ -51,11 +70,16 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
+<<<<<<< HEAD
             {stock}
+=======
+            {/* <Main /> */}
+>>>>>>> e30c0e3 (API Key variable created. Working on the API connection in order to fetch the stock data.)
             </section>
             <div className="row">
               <div className="col-md-11">
                 <section className="ctn-charts glassmorphism-effect">
+                {/* <Daily /> */}
                 </section>
                 <div className="row">
                   <div className="col-md-11">
