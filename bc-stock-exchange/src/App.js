@@ -6,6 +6,8 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
+import API from './Components/API'
+
 require('dotenv').config()
 
 function App() {
@@ -25,6 +27,7 @@ function App() {
       setStock(data.name + " " + data.symbol)
     })
   } */
+
   return (
     <section className="container-fluid">
       <div className="row">
@@ -32,7 +35,7 @@ function App() {
           <div className="col-md-1 ">
             <aside className="ctn-sidebar">
               <ul className="sidebar-links">
-                <li className="sd-logo" onClick={getStock}>
+                <li className="sd-logo">
                   <FontAwesomeIcon icon={faApple} size="3x" />
                 </li>
                 <li className="sd-logo">
@@ -46,6 +49,7 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
+            <API />
             </section>
             <div className="row">
               <div className="col-md-11">
