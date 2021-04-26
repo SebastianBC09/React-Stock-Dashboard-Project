@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import Main from './Components/main_chart'
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
+            <Main />
             </section>
             <div className="row">
               <div className="col-md-11">
