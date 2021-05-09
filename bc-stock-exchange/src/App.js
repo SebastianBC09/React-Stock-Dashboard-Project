@@ -6,7 +6,9 @@ import { faApple } from '@fortawesome/free-brands-svg-icons'
 import { faAmazon } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import API from './Components/API'
+import Line from './Components/LineChart'
+
+/* import API from './Components/API' */
 require('dotenv').config()
 
 function App() {
@@ -47,11 +49,13 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
-            <API />
+            {/* <API /> */}
+            <Line />
             </section>
             <div className="row">
               <div className="col-md-11">
                 <section className="ctn-charts glassmorphism-effect">
+                {/* <Line /> */}
                 </section>
                 <div className="row">
                   <div className="col-md-11">
