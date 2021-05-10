@@ -9,25 +9,9 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Line from './Components/LineChart'
 
 import API from './Components/API'
-/* require('dotenv').config() */
+
 
 function App() {
-  
-/*   const apiKey = process.env.API_KEY;
-  const params = {acccess_key: apiKey} */
-
-/*   const [stock, setStock] = useState("") */
-  /* const getStock = () => {
-    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .then((data) => {
-      setStock(data.name + " " + data.symbol)
-    })
-
-  }
-  } */
-
   return (
     <section className="container-fluid">
       <div className="row">
