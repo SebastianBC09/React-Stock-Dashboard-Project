@@ -2,14 +2,13 @@ import React from 'react';
 import {useState} from 'react'
 
 require('dotenv').config()
-const apiKey = process.env.API_KEY;
+const APIKEY = process.env.REACT_APP_STOCK_API_KEY;
 
 function API () {
-
   const [data, setData] = useState([])
 
   const getAPI = () => {
-    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${apiKey}`)
+    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${APIKEY}`)
     .then((response) => response.json())
     .then((json) => {
       console.log(json)

@@ -8,8 +8,8 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 import Line from './Components/LineChart'
 
-/* import API from './Components/API' */
-require('dotenv').config()
+import API from './Components/API'
+/* require('dotenv').config() */
 
 function App() {
   
@@ -49,7 +49,7 @@ function App() {
           </div>
           <div className="col-md-11">
             <section className="ctn-main-chart glassmorphism-effect">
-            {/* <API /> */}
+            <API />
             <Line />
             </section>
             <div className="row">

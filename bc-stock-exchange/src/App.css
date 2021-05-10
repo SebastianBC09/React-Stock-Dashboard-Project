@@ -1,5 +1,4 @@
-/* Titles -> font-family: 'Hind', sans-serif; */
-/* Texts -> font-family: 'Roboto', sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */
 
 /* Glass efect */
 
@@ -52,6 +51,8 @@
 
 .ctn-main-chart canvas {
   color: #C2B8B2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   font-size: 18px;
 }
 
