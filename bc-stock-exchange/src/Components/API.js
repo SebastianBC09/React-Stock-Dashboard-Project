@@ -7,8 +7,9 @@ const APIKEY = process.env.REACT_APP_STOCK_API_KEY;
 function API () {
   const [data, setData] = useState([])
 
+
   const getAPI = () => {
-    fetch(`http://api.marketstack.com/v1/tickers/aapl/eod?access_key=${APIKEY}`)
+    fetch(`http://api.marketstack.com/v1/eod/latest?access_key=${APIKEY}&symbols=AAPL,AMZN,TWTR`)
     .then((response) => response.json())
     .then((json) => {
       console.log(json)
